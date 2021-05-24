@@ -352,9 +352,31 @@
 
 - List methods: add, addAll, list[index]=..., replaceRange(), remove(), removeAt(), removeRange(), ...
 
+**Set**
+
+- A collection of object that each object occur only once, import `dart:core`
+
+- ```dart
+  identifier = new Set();
+  identifier = new Set.from(list of values);
+  //ex
+  Set numSet = new Set();
+  numSet.add(1);
+  numSet.add(2);
+  //or
+  Set numSet = new Set.from([1, 2]);
+  for(var n in numSet){
+      print(n);        //1    2  in theo thứ tự add vào
+  }
+  ```
+
+**HashSet**
+
+- An unordered hashtable based Set - mỗi object là duy nhất, thứ tự in không theo thứ tự add
+
 **Map**
 
-- Use `{ }` and Constructor, can include NULL
+- Use `{ }` and Constructor, can include NULL. In theo thứ tự add
 
 - ```dart
   var map = {key1:value1, key2:value2, ...};
@@ -372,6 +394,25 @@
 - Map properties: `Keys` - all keys, `Values` - all values, `Length`,`isEmpty`, `isNotEmpty`
 
 - Map func: `addAll()`, `clear()`, `remove()`, `forEach()` 
+
+**HashMap**
+
+- Giống Map, thứ tự in ra không giống thứ tự add vào
+
+**Queue**
+
+- In ra theo thứ tự add
+
+**Iterator**
+
+- ```dart
+  Queue q = new Queue();
+  q.addAll([100, 200, 300]);
+  Iterator i = q.iterator;
+  while(i.moveNext()){
+      print(i.current);    //in theo thứ tự add
+  }
+  ```
 
 **Rune**
 
@@ -639,7 +680,7 @@
 - ```dart
   class Car{
       String name;
-      
+  
       String get car_name{        //keyword get
           return name;
       }
@@ -679,3 +720,71 @@
 - `static` is the same Java
 
 - `super`  refer to the parent of class, to get variable, property, methods
+
+**Generic**
+
+- Giống như Java
+
+**Package**
+
+- A mechanism to encapsulate a group of programming units
+
+- The package manager for Dart is **pub** - https://pub.dartlang.org
+
+- The **package metadata** is defined in **pubsec.yaml** file (Yet Another Markup Language)  to download library
+
+- Command:
+  
+  - `pub get`: get all packages that app is depending on
+  
+  - `pub upgrade`: upgrade dependency to newest version
+  
+  - `pub build`: build app, create build folder
+  
+  - `pub help`: help all command
+
+- Install package:
+  
+  - Add dependency to pubsec.yaml
+  
+  - `pub get` command auto, if not, do it
+  
+  - `import 'package...' as any_name`
+
+**Exception**
+
+- DeferredLoadException, FormatException, IntegerDivisonByZeroException, IOException, IsolateSpawnException, Timeout
+
+- `try ... on/catch ... finally`
+
+- ```dart
+  try{
+      
+  } on Exception_name{
+      //chỉ ném ra Exception và thông tin được code thêm
+  } catch (Exception e){
+      //ném ra object e chứa code xử lý exception
+  } finally{
+      //như java
+  }
+  ```
+
+- `throw new Exception_name();` giống java
+
+- Customer Exception
+  
+  - ```dart
+    class Cus_Exception implements Exception{
+        String errorMessage() => 'some error';
+    }
+    void main(){
+        try{
+            something...
+                    throw new Cus_Exception();
+        } catch(Cus_Exception e){
+            print(e.errorMessage);    //some error
+        }
+    }
+    ```
+  
+  - 
