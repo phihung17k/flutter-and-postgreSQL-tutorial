@@ -74,19 +74,19 @@
   
   - In **StatelessWidget**, for every widget have a corresponding **element** - hold information about type of each widget and reference to children elements (skeleton). <img title="" src="./img/2022-09-03-10-02-29-image.png" alt="loading-ag-434" width="295" data-align="left">
   
-  - When wrap order of **StatelessWidget**, Flutter walk the element tree, and check the new widget is the same type and key as the old one => it updates reference to the new widget<img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-06-18-image.png" alt="" width="298" data-align="left">
+  - When wrap order of **StatelessWidget**, Flutter walk the element tree, and check the new widget is the same type and key as the old one => it updates reference to the new widget<img title="" src="./img/2022-09-03-10-06-18-image.png" alt="loading-ag-444" width="298" data-align="left">
   
-  - In **StatefulWidget**, widget has the **State** object and the color information is stored in **State**, not in widget. <img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-11-13-image.png" alt="" width="330" data-align="left">
+  - In **StatefulWidget**, widget has the **State** object and the color information is stored in **State**, not in widget. <img title="" src="./img/2022-09-03-10-11-13-image.png" alt="loading-ag-448" width="330" data-align="left">
   
-  - So when swap order of widget, Flutter check the type of **StatefulWidget** is the same type and update reference to the new widget (not it's **State**).<img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-15-12-image.png" alt="" data-align="left" width="351">
+  - So when swap order of widget, Flutter check the type of **StatefulWidget** is the same type and update reference to the new widget (not it's **State**).<img title="" src="./img/2022-09-03-10-15-12-image.png" alt="loading-ag-449" data-align="left" width="351">
   
-  - With **Key**, Flutter check that the key of **element** doesn't match the key of **StatefulWidget**. So that, Flutter deactivates and moving the reference to **element** in element tree. <img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-17-51-image.png" alt="" width="343" data-align="left">
+  - With **Key**, Flutter check that the key of **element** doesn't match the key of **StatefulWidget**. So that, Flutter deactivates and moving the reference to **element** in element tree. <img title="" src="./img/2022-09-03-10-17-51-image.png" alt="loading-ag-451" width="343" data-align="left">
   
-  - When it finds a match, update the reference to the corresponding widget.<img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-22-56-image.png" alt="" data-align="left" width="349">
+  - When it finds a match, update the reference to the corresponding widget.<img title="" src="./img/2022-09-03-10-22-56-image.png" alt="loading-ag-453" data-align="left" width="349">
   
   - Then swapping places and updating **State**
     
-    <img src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-24-47-image.png" title="" alt="" width="372">
+    <img title="" src="./img/2022-09-03-10-24-47-image.png" alt="" width="372">
 
 #### Widget
 
