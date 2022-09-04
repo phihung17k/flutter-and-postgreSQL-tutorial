@@ -72,7 +72,7 @@
 
 - If the entire widget subtree in collection is **StatelessWidget**, key **aren't** needed. Use in **StatefulWidget**.
   
-  - In **StatelessWidget**, for every widget have a corresponding **element** - hold information about type of each widget and reference to children elements (skeleton). <img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-02-29-image.png" alt="" width="295" data-align="left">
+  - In **StatelessWidget**, for every widget have a corresponding **element** - hold information about type of each widget and reference to children elements (skeleton). <img title="" src="./img/2022-09-03-10-02-29-image.png" alt="loading-ag-434" width="295" data-align="left">
   
   - When wrap order of **StatelessWidget**, Flutter walk the element tree, and check the new widget is the same type and key as the old one => it updates reference to the new widget<img title="" src="file:///C:/Users/hung17k/AppData/Roaming/marktext/images/2022-09-03-10-06-18-image.png" alt="" width="298" data-align="left">
   
@@ -181,8 +181,6 @@
   - Otherwise, call [dispose](https://api.flutter.dev/flutter/widgets/State/dispose.html),  [State](https://api.flutter.dev/flutter/widgets/State-class.html) object will never build again
   
   - Then, the [State](https://api.flutter.dev/flutter/widgets/State-class.html) object is considered unmounted and the [mounted](https://api.flutter.dev/flutter/widgets/State/mounted.html) property is false. It is an error to call [setState](https://api.flutter.dev/flutter/widgets/State/setState.html)
-
-
 
 #### InheritedWidget
 
